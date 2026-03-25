@@ -7,20 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-:root {
-  --bg:      #080b10;
-  --surface: #0d1117;
-  --card:    #111820;
-  --card2:   #141e28;
-  --border:  rgba(255,255,255,0.07);
-  --bh:      rgba(120,200,255,0.25);
-  --accent:  #78c8ff;
-  --green:   #4ade9a;
-  --text:    #e2eaf4;
-  --sub:     #8fa8c0;
-  --muted:   #4a6070;
-  --mono:    'JetBrains Mono', monospace;
-}
+:root{--bg:#080b10;--surface:#0d1117;--card:#111820;--card2:#141e28;--border:rgba(255,255,255,0.07);--bh:rgba(120,200,255,0.25);--accent:#78c8ff;--green:#4ade9a;--text:#e2eaf4;--sub:#8fa8c0;--muted:#4a6070;--mono:'JetBrains Mono',monospace;}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
 body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-size:15px;line-height:1.7;overflow-x:hidden;}
@@ -28,12 +15,6 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;back
 .blob1,.blob2{position:fixed;border-radius:50%;filter:blur(110px);pointer-events:none;z-index:0;}
 .blob1{width:500px;height:500px;background:rgba(120,200,255,0.06);top:-120px;right:-80px;}
 .blob2{width:400px;height:400px;background:rgba(74,222,154,0.04);bottom:-80px;left:-80px;}
-
-.cur{width:5px;height:5px;background:var(--accent);border-radius:50%;position:fixed;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .15s,height .15s,background .15s;}
-.cur-r{width:26px;height:26px;border:1px solid rgba(120,200,255,0.3);border-radius:50%;position:fixed;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);}
-.cur.h{width:10px;height:10px;background:var(--green);}
-.cur-r.h{width:42px;height:42px;border-color:rgba(74,222,154,0.3);}
-
 nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 60px;height:64px;background:rgba(8,11,16,0.88);backdrop-filter:blur(24px);border-bottom:1px solid var(--border);}
 .logo{font-family:'Instrument Serif',serif;font-size:20px;color:var(--text);text-decoration:none;}
 .logo span{color:var(--accent);}
@@ -42,7 +23,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .nav-links a:hover{color:var(--text);}
 .nav-cta{padding:8px 22px;border:1px solid var(--accent);color:var(--accent);font-size:13px;text-decoration:none;transition:all .2s;border-radius:4px;}
 .nav-cta:hover{background:var(--accent);color:var(--bg);}
-
 .page{position:relative;z-index:2;}
 .wrap{max-width:1200px;margin:0 auto;padding:0 60px;}
 .section{border-top:1px solid var(--border);padding:88px 0;}
@@ -50,8 +30,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .sec-eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:8px;}
 .sec-title{font-family:'Instrument Serif',serif;font-size:clamp(28px,3vw,44px);line-height:1.05;letter-spacing:-.5px;}
 .sec-note{font-size:13px;color:var(--muted);max-width:260px;text-align:right;line-height:1.6;}
-
-/* HERO */
 #hero{min-height:100vh;display:grid;grid-template-columns:1fr 400px;gap:60px;align-items:center;max-width:1200px;margin:0 auto;padding:110px 60px 60px;}
 .hero-chip{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--green);border:1px solid rgba(74,222,154,0.2);padding:5px 14px;border-radius:99px;margin-bottom:32px;}
 .hero-chip::before{content:'';width:6px;height:6px;background:var(--green);border-radius:50%;animation:pulse 2s ease-in-out infinite;}
@@ -72,8 +50,6 @@ h1 em{font-style:italic;color:var(--accent);}
 .hs:last-child{border-right:none;}
 .hs-n{font-family:'Instrument Serif',serif;font-size:26px;color:var(--accent);line-height:1;margin-bottom:3px;}
 .hs-l{font-size:10px;color:var(--muted);letter-spacing:.04em;}
-
-/* HERO RIGHT */
 .hero-right{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:32px;display:flex;flex-direction:column;gap:20px;}
 .profile-avatar{width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,#1a2d45,#0f2035);border:2px solid var(--border);display:flex;align-items:center;justify-content:center;font-family:'Instrument Serif',serif;font-size:28px;color:var(--accent);}
 .profile-name{font-family:'Instrument Serif',serif;font-size:21px;line-height:1.1;margin-top:12px;}
@@ -81,14 +57,12 @@ h1 em{font-style:italic;color:var(--accent);}
 .profile-divider{height:1px;background:var(--border);}
 .profile-links{display:flex;flex-direction:column;gap:8px;}
 .pl-link{display:flex;align-items:center;gap:12px;text-decoration:none;padding:10px 14px;border:1px solid var(--border);border-radius:6px;transition:all .2s;background:var(--card2);}
-.pl-link:hover{border-color:var(--bh);background:rgba(120,200,255,0.04);}
+.pl-link:hover{border-color:rgba(120,200,255,0.25);background:rgba(120,200,255,0.04);}
 .pl-icon{width:28px;height:28px;background:rgba(120,200,255,0.08);border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:11px;color:var(--accent);font-weight:600;font-family:var(--mono);flex-shrink:0;}
 .pl-t{font-size:13px;font-weight:500;color:var(--text);display:block;}
 .pl-s{font-size:11px;color:var(--muted);}
 .pl-arrow{margin-left:auto;color:var(--muted);font-size:15px;}
 .pl-link:hover .pl-arrow{color:var(--accent);}
-
-/* VIDEO */
 #intro{border-top:1px solid var(--border);padding:96px 0;}
 .video-outer{max-width:860px;margin:0 auto;}
 .video-frame{border:1px solid var(--border);border-radius:12px;overflow:hidden;background:var(--card);}
@@ -98,40 +72,31 @@ h1 em{font-style:italic;color:var(--accent);}
 .video-ph:hover .play-ring{background:rgba(120,200,255,0.1);transform:scale(1.08);}
 .play-ring::after{content:'';width:0;height:0;border-top:11px solid transparent;border-bottom:11px solid transparent;border-left:18px solid var(--accent);margin-left:4px;}
 .video-caption{font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;}
-.video-embed{aspect-ratio:16/9;width:100%;display:none;border:none;}
-.video-embed.on{display:block;}
-
-/* EXPERIENCE TIMELINE */
-.exp-list{display:flex;flex-direction:column;gap:0;}
-.exp-item{display:grid;grid-template-columns:200px 1fr;gap:0;}
-.exp-left{padding:4px 32px 44px 0;border-right:1px solid var(--border);text-align:right;}
-.exp-date{font-family:var(--mono);font-size:11px;color:var(--accent);letter-spacing:.08em;}
+.exp-list{display:flex;flex-direction:column;}
+.exp-item{display:grid;grid-template-columns:210px 1fr;}
+.exp-left{padding:4px 32px 48px 0;border-right:1px solid var(--border);text-align:right;}
+.exp-date{font-family:var(--mono);font-size:11px;color:var(--accent);letter-spacing:.06em;}
 .exp-co{font-size:12px;color:var(--muted);margin-top:3px;}
-.exp-right{padding:0 0 44px 32px;position:relative;}
+.exp-right{padding:0 0 48px 32px;position:relative;}
 .exp-right::before{content:'';width:8px;height:8px;background:var(--accent);border-radius:50%;position:absolute;left:-4px;top:5px;}
-.exp-role{font-family:'Instrument Serif',serif;font-size:19px;font-weight:400;margin-bottom:8px;}
+.exp-role{font-family:'Instrument Serif',serif;font-size:20px;margin-bottom:6px;}
+.exp-level{display:inline-block;font-family:var(--mono);font-size:10px;padding:2px 10px;border:1px solid rgba(74,222,154,0.3);color:var(--green);border-radius:3px;margin-bottom:10px;}
 .exp-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px;}
 .exp-tag{font-family:var(--mono);font-size:10px;padding:2px 9px;border:1px solid rgba(120,200,255,0.2);color:var(--accent);border-radius:3px;}
 .exp-desc{font-size:13px;color:var(--sub);line-height:1.8;}
-
-/* STACK */
 .stack-layout{display:grid;grid-template-columns:1fr 1fr;gap:48px;}
 .stack-group-title{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--border);}
 .stack-pills{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px;}
 .sp{padding:7px 16px;background:var(--card);border:1px solid var(--border);border-radius:6px;font-size:13px;color:var(--sub);transition:all .2s;cursor:default;}
-.sp:hover{border-color:var(--bh);color:var(--text);}
+.sp:hover{border-color:rgba(120,200,255,0.25);color:var(--text);}
 .sp.main{border-color:rgba(120,200,255,0.25);color:var(--accent);}
-.sp.cert{border-color:rgba(74,222,154,0.25);color:var(--green);}
-.sp.cert::after{content:' (certified)';font-size:10px;opacity:.6;}
 .automation-callout{grid-column:1/-1;background:var(--card);border:1px solid var(--border);border-radius:10px;padding:28px 32px;border-left:3px solid var(--green);}
 .ac-title{font-family:'Instrument Serif',serif;font-size:20px;margin-bottom:6px;}
 .ac-text{font-size:13px;color:var(--sub);line-height:1.75;}
-
-/* PROJECTS */
 .projects-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
 .proj-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:28px;transition:all .3s;position:relative;overflow:hidden;display:flex;flex-direction:column;}
 .proj-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--green));transform:scaleX(0);transform-origin:left;transition:transform .35s;}
-.proj-card:hover{border-color:var(--bh);transform:translateY(-3px);}
+.proj-card:hover{border-color:rgba(120,200,255,0.25);transform:translateY(-3px);}
 .proj-card:hover::before{transform:scaleX(1);}
 .proj-live{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--green);margin-bottom:10px;}
 .proj-live::before{content:'';width:6px;height:6px;background:var(--green);border-radius:50%;animation:pulse 2s ease-in-out infinite;}
@@ -146,11 +111,9 @@ h1 em{font-style:italic;color:var(--accent);}
 .proj-link::after{content:'→';}
 .proj-link.gh{color:var(--sub);}
 .proj-link.gh:hover{color:var(--text);}
-
-/* WORK HISTORY */
 .work-list{display:flex;flex-direction:column;gap:10px;}
 .wc{background:var(--card);border:1px solid var(--border);border-radius:10px;overflow:hidden;transition:border-color .2s;}
-.wc:hover{border-color:var(--bh);}
+.wc:hover{border-color:rgba(120,200,255,0.25);}
 .wc-header{padding:20px 26px;display:flex;align-items:center;justify-content:space-between;gap:16px;cursor:pointer;user-select:none;}
 .wc-left{display:flex;align-items:center;gap:14px;flex:1;min-width:0;}
 .wc-dot{width:7px;height:7px;border-radius:50%;background:var(--accent);flex-shrink:0;}
@@ -169,8 +132,6 @@ h1 em{font-style:italic;color:var(--accent);}
 .feedback{background:rgba(120,200,255,0.04);border-left:2px solid var(--accent);border-radius:0 6px 6px 0;padding:12px 16px;}
 .fb-label{font-family:var(--mono);font-size:10px;color:var(--accent);text-transform:uppercase;letter-spacing:.1em;margin-bottom:4px;}
 .fb-quote{font-size:13px;color:var(--text);line-height:1.7;font-style:italic;}
-
-/* CONNECT */
 .connect-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
 .cc{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:24px;text-decoration:none;display:flex;flex-direction:column;align-items:flex-start;gap:12px;transition:all .25s;}
 .cc:hover{border-color:var(--accent);transform:translateY(-3px);}
@@ -179,18 +140,12 @@ h1 em{font-style:italic;color:var(--accent);}
 .cc-handle{font-size:12px;color:var(--muted);}
 .cc-arrow{font-size:16px;color:var(--muted);margin-top:4px;transition:color .2s;}
 .cc:hover .cc-arrow{color:var(--accent);}
-
 footer{border-top:1px solid var(--border);max-width:1200px;margin:0 auto;padding:32px 60px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:2;font-size:12px;color:var(--muted);}
 footer a{color:var(--accent);text-decoration:none;}
-
-.fi{opacity:0;transform:translateY(18px);transition:opacity .55s ease,transform .55s ease;}
-.fi.v{opacity:1;transform:none;}
-
 @media(max-width:960px){
   nav{padding:0 24px;}.nav-links{display:none;}
   #hero{grid-template-columns:1fr;padding:100px 24px 60px;}.hero-right{display:none;}
-  .wrap,.section{padding:60px 24px;}
-  #intro{padding:60px 24px;}
+  .wrap,.section{padding:60px 24px;}#intro{padding:60px 24px;}
   .stack-layout,.projects-grid,.connect-grid{grid-template-columns:1fr;}
   .exp-item{grid-template-columns:1fr;}.exp-left{border-right:none;text-align:left;padding:0 0 4px 32px;}
   footer{padding:24px;flex-direction:column;gap:6px;text-align:center;}
@@ -199,8 +154,6 @@ footer a{color:var(--accent);text-decoration:none;}
 </head>
 <body>
 <div class="blob1"></div><div class="blob2"></div>
-<div class="cur" id="C"></div>
-<div class="cur-r" id="CR"></div>
 
 <nav>
   <a href="#" class="logo">SJ<span>.</span></a>
@@ -212,12 +165,11 @@ footer a{color:var(--accent);text-decoration:none;}
     <li><a href="#work">Client work</a></li>
     <li><a href="#connect">Connect</a></li>
   </ul>
-  <a href="mailto:jumanovsamandar005@gmail.com" class="nav-cta">Open to work</a>
+  <a href="mailto:samandar@example.com" class="nav-cta">Open to work</a>
 </nav>
 
 <div class="page">
 
-<!-- ══ HERO ══ -->
 <section id="hero">
   <div class="hero-left">
     <div class="hero-chip">Available for full-time remote roles</div>
@@ -225,24 +177,23 @@ footer a{color:var(--accent);text-decoration:none;}
     <p class="hero-role">Backend Engineer · <span>Automation Specialist</span></p>
     <p class="hero-desc">
       I design and build <strong>backend systems, REST APIs, and AI-powered integrations</strong> that scale.
-      3.5 years of professional experience with Java, Node.js, and TypeScript — plus a proven track record of
+      2.5 years of professional experience with Java, Node.js (TypeScript), and cloud-native tools — plus a proven track record of
       <strong>20+ successful client projects</strong>, all with 100% satisfied results.
       Based in Tashkent, Uzbekistan · Open to remote worldwide.
     </p>
     <div class="hero-actions">
       <a href="#projects" class="btn-primary">View projects</a>
       <a href="#work" class="btn-outline">Client work</a>
-      <a href="mailto:jumanovsamandar005@gmail.com" class="btn-outline">Email me</a>
+      <a href="mailto:samandar@example.com" class="btn-outline">Email me</a>
     </div>
     <div class="hero-stats">
-      <div class="hs"><div class="hs-n">3.5</div><div class="hs-l">Years exp.</div></div>
+      <div class="hs"><div class="hs-n">2.5</div><div class="hs-l">Years exp.</div></div>
       <div class="hs"><div class="hs-n">20+</div><div class="hs-l">Clients served</div></div>
       <div class="hs"><div class="hs-n">100%</div><div class="hs-l">Satisfaction</div></div>
       <div class="hs"><div class="hs-n">7.0</div><div class="hs-l">IELTS</div></div>
     </div>
   </div>
-
-  <div class="hero-right fi">
+  <div class="hero-right">
     <div>
       <div class="profile-avatar">SJ</div>
       <div class="profile-name">Samandar Jumanov</div>
@@ -265,47 +216,41 @@ footer a{color:var(--accent);text-decoration:none;}
         <div><span class="pl-t">GitHub</span><span class="pl-s">Samandar-Jumanov</span></div>
         <span class="pl-arrow">↗</span>
       </a>
-      <a href="mailto:jumanovsamandar005@gmail.com" class="pl-link">
+      <a href="mailto:samandar@example.com" class="pl-link">
         <div class="pl-icon">@</div>
-        <div><span class="pl-t">Email</span><span class="pl-s">jumanovsamandar005@gmail.com</span></div>
+        <div><span class="pl-t">Email</span><span class="pl-s">samandar@example.com</span></div>
         <span class="pl-arrow">↗</span>
       </a>
     </div>
   </div>
 </section>
 
-<!-- ══ VIDEO INTRO ══ -->
 <section id="intro">
 <div class="wrap">
-  <div class="sec-header">
-    <div>
-      <div class="sec-eyebrow">// 01 — Introduction</div>
-      <div class="sec-title">See how I think &amp; work</div>
-    </div>
-  </div>
-  <div class="video-outer fi">
+  <div class="sec-header"><div>
+    <div class="sec-eyebrow">// 01 — Introduction</div>
+    <div class="sec-title">See how I think &amp; work</div>
+  </div></div>
+  <div class="video-outer">
     <div class="video-frame">
-      <div class="video-ph" id="vph" onclick="playV()">
+      <div class="video-ph">
         <div class="play-ring"></div>
         <div class="video-caption">Watch 2-min introduction · Loom</div>
       </div>
-      <iframe id="vemb" class="video-embed" src="" data-src="https://www.loom.com/embed/YOUR_LOOM_ID" frameborder="0" allowfullscreen allow="autoplay"></iframe>
     </div>
   </div>
 </div>
 </section>
 
-<!-- ══ EXPERIENCE ══ -->
 <div class="section" id="experience">
 <div class="wrap">
   <div class="sec-header">
     <div>
       <div class="sec-eyebrow">// 02 — Experience</div>
-      <div class="sec-title">3.5 years of professional work</div>
+      <div class="sec-title">2.5 years of professional work</div>
     </div>
   </div>
-  <div class="exp-list fi">
-
+  <div class="exp-list">
     <div class="exp-item">
       <div class="exp-left">
         <div class="exp-date">Late 2025 – Present</div>
@@ -317,49 +262,43 @@ footer a{color:var(--accent);text-decoration:none;}
           <span class="exp-tag">n8n</span><span class="exp-tag">Make.com</span>
           <span class="exp-tag">GoHighLevel</span><span class="exp-tag">OpenAI</span><span class="exp-tag">Node.js</span>
         </div>
-        <div class="exp-desc">20+ automation and backend projects delivered for agencies, SaaS businesses, and service companies across the US, UK, and Canada. 100% client satisfaction. Make.com Advanced Certified.</div>
+        <div class="exp-desc">20+ automation and backend projects for agencies, SaaS businesses, and service companies across the US, UK, and Canada. 100% client satisfaction. Make.com Advanced Certified.</div>
       </div>
     </div>
-
-
-
     <div class="exp-item">
       <div class="exp-left">
         <div class="exp-date">2024 – Early 2025</div>
         <div class="exp-co">Teclar · Remote</div>
       </div>
       <div class="exp-right">
-        <div class="exp-role">Backend Developer</div>
+        <div class="exp-role">Mid-level Backend Developer</div>
+        <span class="exp-level">Mid-level</span>
         <div class="exp-tags">
           <span class="exp-tag">Java</span><span class="exp-tag">Node.js</span>
           <span class="exp-tag">TypeScript</span><span class="exp-tag">PostgreSQL</span><span class="exp-tag">REST APIs</span>
         </div>
-        <div class="exp-desc">Designed and built backend services and REST APIs serving production users. Owned features end-to-end — database schema through to deployment. Agile team, code reviews, CI/CD pipelines.</div>
+        <div class="exp-desc">Designed and owned backend services and REST APIs end-to-end — database schema through to deployed endpoint. Agile team, code reviews, CI/CD pipelines across multiple product iterations.</div>
       </div>
     </div>
-
-
-          <div class="exp-item">
+    <div class="exp-item">
       <div class="exp-left">
-        <div class="exp-date">2023 – Late 2024</div>
-        <div class="exp-co">Dedicated Agency · Office</div>
+        <div class="exp-date">Mid 2022 – 2024</div>
+        <div class="exp-co">Dedicated Agency · Remote</div>
       </div>
       <div class="exp-right">
-        <div class="exp-role">Backend Developer</div>
+        <div class="exp-role">Junior → Mid Backend Developer</div>
+        <span class="exp-level">Junior → Mid</span>
         <div class="exp-tags">
           <span class="exp-tag">Java</span><span class="exp-tag">Node.js</span>
           <span class="exp-tag">TypeScript</span><span class="exp-tag">Third-party APIs</span>
         </div>
-        <div class="exp-desc">Built and shipped backend systems for multiple agency clients — REST API design, third-party integrations, and cloud deployment. Translated requirements into maintainable solutions on tight timelines.</div>
+        <div class="exp-desc">Started as a strong junior and grew into a mid-level backend developer. Built and shipped backend systems for multiple agency clients — REST API design, third-party integrations, and cloud deployment across concurrent projects.</div>
       </div>
     </div>
-  
-
   </div>
 </div>
 </div>
 
-<!-- ══ PROJECTS ══ -->
 <div class="section" id="projects">
 <div class="wrap">
   <div class="sec-header">
@@ -367,11 +306,10 @@ footer a{color:var(--accent);text-decoration:none;}
       <div class="sec-eyebrow">// 03 — Engineering projects</div>
       <div class="sec-title">What I've built</div>
     </div>
-    <div class="sec-note">Real projects — one in production for a live business.</div>
+    <div class="sec-note">One running in production for a live business right now.</div>
   </div>
   <div class="projects-grid">
-
-    <div class="proj-card fi">
+    <div class="proj-card">
       <div class="proj-live">Live in production</div>
       <div class="proj-label">Node.js · Client project</div>
       <div class="proj-title">Car Rental Platform</div>
@@ -385,38 +323,35 @@ footer a{color:var(--accent);text-decoration:none;}
         <span style="font-family:var(--mono);font-size:11px;color:var(--green);">Running in production</span>
       </div>
     </div>
-
-    <div class="proj-card fi">
+    <div class="proj-card">
       <div class="proj-label">Microservices · Java + Node.js</div>
       <div class="proj-title">ShopFlow — Microservices System</div>
-      <div class="proj-desc">Production-style e-commerce backend with 3 services: Java/Spring Boot order service, Node.js notification service, and Express API gateway. Services communicate asynchronously via RabbitMQ — orders return 201 immediately, emails delivered async. JWT auth, Resilience4j circuit breaker, Docker Compose, Swagger docs.</div>
+      <div class="proj-desc">3-service e-commerce backend: Java/Spring Boot order service, Node.js notification service, Express API gateway. Async messaging via RabbitMQ — orders return 201 immediately, emails async. JWT auth, Resilience4j circuit breaker, Docker Compose, Swagger/OpenAPI docs.</div>
       <div class="proj-tech">
         <span class="pt">Java</span><span class="pt">Spring Boot</span><span class="pt">Node.js</span>
         <span class="pt">RabbitMQ</span><span class="pt">PostgreSQL</span><span class="pt">Docker</span>
-        <span class="pt">JWT</span><span class="pt">Resilience4j</span>
+        <span class="pt">Resilience4j</span>
       </div>
       <div class="proj-links">
         <a href="https://github.com/Samandar-Jumanov" target="_blank" class="proj-link gh">GitHub</a>
       </div>
     </div>
-
-    <div class="proj-card fi">
-      <div class="proj-label">AI Workflow · Python + n8n</div>
+    <div class="proj-card">
+      <div class="proj-label">AI Workflow · n8n + GPT-4o</div>
       <div class="proj-title">AI Document Assistant</div>
-      <div class="proj-desc">AI assistant built for a Canadian construction company. Accepts queries via web, SMS, or email — GPT-4o interprets intent, searches Dropbox for relevant SOPs using a RAG pattern, and routes complex queries to manual escalation. Delivered with interaction logs and a full handoff session.</div>
+      <div class="proj-desc">Built for a Canadian construction company. Accepts queries via web, SMS, or email — GPT-4o interprets intent, searches Dropbox for relevant SOPs using RAG, routes complex queries to manual escalation. Delivered with interaction logs and full handoff session.</div>
       <div class="proj-tech">
-        <span class="pt">Python</span><span class="pt">n8n</span><span class="pt">GPT-4o</span>
+        <span class="pt">n8n</span><span class="pt">GPT-4o</span>
         <span class="pt">Dropbox API</span><span class="pt">RAG</span><span class="pt">SMS</span>
       </div>
       <div class="proj-links">
         <a href="#work" class="proj-link">Case details</a>
       </div>
     </div>
-
-    <div class="proj-card fi">
+    <div class="proj-card">
       <div class="proj-label">Automation · Make.com + Stripe</div>
       <div class="proj-title">Affiliate Commission Tracker</div>
-      <div class="proj-desc">Make.com automation that captures Stripe payment events and logs them to Google Sheets with full affiliate attribution — mapping each payment to its source payment link so commission payouts are calculated automatically. Built for a live affiliate programme currently in use.</div>
+      <div class="proj-desc">Make.com automation capturing Stripe payment events and logging to Google Sheets with full affiliate attribution — mapping each payment to its source link for automated commission calculation. Currently in use by a live affiliate programme.</div>
       <div class="proj-tech">
         <span class="pt">Make.com</span><span class="pt">Stripe API</span>
         <span class="pt">Google Sheets</span><span class="pt">Webhooks</span>
@@ -425,12 +360,10 @@ footer a{color:var(--accent);text-decoration:none;}
         <a href="#work" class="proj-link">Case details</a>
       </div>
     </div>
-
   </div>
 </div>
 </div>
 
-<!-- ══ TECH STACK ══ -->
 <div class="section" id="stack">
 <div class="wrap">
   <div class="sec-header">
@@ -440,78 +373,69 @@ footer a{color:var(--accent);text-decoration:none;}
     </div>
     <div class="sec-note">Backend-first. Automation-capable. Full-stack when needed.</div>
   </div>
-  <div class="stack-layout fi">
+  <div class="stack-layout">
     <div>
       <div class="stack-group-title">Languages</div>
       <div class="stack-pills">
-        <span class="sp main">Java</span>
-        <span class="sp main">TypeScript</span>
-        <span class="sp main">Node.js</span>
-        <span class="sp main">Python</span>
-        <span class="sp">JavaScript</span>
-        <span class="sp">Bash</span>
+        <span class="sp main">Java 17+</span><span class="sp main">TypeScript</span>
+        <span class="sp main">Node.js</span><span class="sp">JavaScript</span>
+        <span class="sp">SQL</span><span class="sp">Bash</span>
       </div>
-      <div class="stack-group-title">Backend &amp; APIs</div>
+      <div class="stack-group-title">Frameworks</div>
       <div class="stack-pills">
-        <span class="sp main">Spring Boot</span>
-        <span class="sp main">NestJS</span>
-        <span class="sp main">Express.js</span>
+        <span class="sp main">Spring Boot 3.x</span><span class="sp main">Spring Security</span>
+        <span class="sp main">Spring Data JPA</span><span class="sp main">Hibernate</span>
+        <span class="sp main">NestJS</span><span class="sp main">Express.js</span>
         <span class="sp">Fastify</span>
-        <span class="sp">REST APIs</span>
-        <span class="sp">GraphQL</span>
-        <span class="sp">JWT / OAuth2</span>
-        <span class="sp">OpenAI API</span>
-        <span class="sp">Stripe API</span>
-        <span class="sp">Google APIs</span>
       </div>
-      <div class="stack-group-title">Databases &amp; Messaging</div>
+      <div class="stack-group-title">APIs &amp; Architecture</div>
       <div class="stack-pills">
-        <span class="sp main">PostgreSQL</span>
-        <span class="sp">MySQL</span>
-        <span class="sp">MongoDB</span>
-        <span class="sp">Redis</span>
-        <span class="sp main">RabbitMQ</span>
-        <span class="sp">Kafka</span>
+        <span class="sp main">REST</span><span class="sp">GraphQL</span>
+        <span class="sp">Microservices</span><span class="sp">Event-driven</span>
+        <span class="sp">Clean Architecture</span><span class="sp">SOLID</span>
+        <span class="sp">JWT / OAuth2</span>
+      </div>
+      <div class="stack-group-title">Databases</div>
+      <div class="stack-pills">
+        <span class="sp main">PostgreSQL</span><span class="sp">MySQL</span>
+        <span class="sp">MongoDB</span><span class="sp">Redis</span>
+        <span class="sp">Query optimisation</span><span class="sp">Indexing</span>
       </div>
     </div>
     <div>
-      <div class="stack-group-title">Infrastructure &amp; DevOps</div>
+      <div class="stack-group-title">Messaging &amp; Streaming</div>
       <div class="stack-pills">
-        <span class="sp main">Docker</span>
-        <span class="sp">Docker Compose</span>
-        <span class="sp">GitHub Actions</span>
-        <span class="sp">Nginx</span>
-        <span class="sp">Railway</span>
-        <span class="sp">Render</span>
+        <span class="sp main">Apache Kafka</span><span class="sp main">RabbitMQ</span>
+        <span class="sp">Event streaming</span><span class="sp">Dead-letter queues</span>
       </div>
-      <div class="stack-group-title">AI &amp; Integrations</div>
+      <div class="stack-group-title">DevOps &amp; Cloud</div>
       <div class="stack-pills">
-        <span class="sp main">OpenAI GPT-4o</span>
-        <span class="sp">Retell AI</span>
-        <span class="sp">RAG pipelines</span>
-        <span class="sp">LangChain</span>
+        <span class="sp main">Docker</span><span class="sp">Docker Compose</span>
+        <span class="sp main">Kubernetes</span><span class="sp">GitHub Actions CI/CD</span>
+        <span class="sp main">AWS (EC2, S3)</span><span class="sp">Nginx</span>
+        <span class="sp">Railway</span><span class="sp">Render</span>
+      </div>
+      <div class="stack-group-title">Testing &amp; Observability</div>
+      <div class="stack-pills">
+        <span class="sp main">JUnit 5</span><span class="sp">Mockito</span>
+        <span class="sp">Jest</span><span class="sp">TDD</span>
+        <span class="sp">Swagger / OpenAPI</span><span class="sp">Postman</span>
+        <span class="sp">Structured logging</span>
       </div>
       <div class="stack-group-title">Tools</div>
       <div class="stack-pills">
-        <span class="sp">Git</span>
-        <span class="sp">Postman</span>
-        <span class="sp">Swagger / OpenAPI</span>
-        <span class="sp">IntelliJ IDEA</span>
-        <span class="sp">VS Code</span>
-        <span class="sp">Jira</span>
+        <span class="sp">Git</span><span class="sp">IntelliJ IDEA</span>
+        <span class="sp">VS Code</span><span class="sp">Jira</span>
       </div>
     </div>
     <div class="automation-callout">
       <div class="ac-title">Also a certified automation specialist</div>
-      <div class="ac-text">
-        Beyond backend code, I hold a <strong style="color:var(--green)">Make.com Advanced Certification</strong> and have delivered 20+ automation projects across n8n, Make.com, GoHighLevel, and Zapier — giving me a rare ability to build both the backend system and the no-code integration layer on top of it.
-      </div>
+      <div class="ac-text">Beyond backend code, I hold a <strong style="color:var(--green)">Make.com Advanced Certification</strong> and have delivered 20+ automation projects across n8n, Make.com, GoHighLevel, and Zapier — giving me the rare ability to build both the backend system and the no-code integration layer on top of it.</div>
     </div>
   </div>
 </div>
 </div>
 
-<!-- ══ CLIENT WORK ══ -->
 <div class="section" id="work">
 <div class="wrap">
   <div class="sec-header">
@@ -521,7 +445,7 @@ footer a{color:var(--accent);text-decoration:none;}
     </div>
     <div class="sec-note">All projects via Upwork. Click any row to expand.</div>
   </div>
-  <div class="work-list fi">
+  <div class="work-list">
 
     <div class="wc" onclick="toggleWC(this)">
       <div class="wc-header">
@@ -530,7 +454,7 @@ footer a{color:var(--accent);text-decoration:none;}
         <div class="wc-chevron">▾</div>
       </div>
       <div class="wc-body"><div class="wc-inner">
-        <div class="wc-desc">Integrated GoHighLevel with Make.com and Assistable.ai. Built automations across the agency's full stack, communicated progress via Loom walkthroughs, and suggested architecture improvements throughout.</div>
+        <div class="wc-desc">Integrated GoHighLevel with Make.com and Assistable.ai. Built automations across the agency's full stack, communicated via Loom walkthroughs, and suggested architecture improvements throughout.</div>
         <div class="wc-pills"><span class="wc-pill">GoHighLevel</span><span class="wc-pill">Make.com</span><span class="wc-pill">Assistable.ai</span><span class="wc-pill">OpenAI</span><span class="wc-pill">Discord</span></div>
         <div class="feedback"><div class="fb-label">Client feedback</div><div class="fb-quote">"He has been AMAZING! He's very good at communicating by sending Looms and suggesting next steps. Working with him is a no-brainer."</div></div>
       </div></div>
@@ -543,7 +467,7 @@ footer a{color:var(--accent);text-decoration:none;}
         <div class="wc-chevron">▾</div>
       </div>
       <div class="wc-body"><div class="wc-inner">
-        <div class="wc-desc">AI assistant for on-site supervisors — accepts queries via web, SMS, or email, matches intent with GPT-4o, searches Dropbox SOPs via RAG, routes complex queries to manual escalation. Delivered with logs and full handoff session.</div>
+        <div class="wc-desc">AI assistant for on-site supervisors — GPT-4o intent matching, Dropbox SOP search via RAG, manual escalation routing. Delivered with logs and full handoff session.</div>
         <div class="wc-pills"><span class="wc-pill">n8n</span><span class="wc-pill">GPT-4o</span><span class="wc-pill">Dropbox API</span><span class="wc-pill">SMS</span><span class="wc-pill">RAG</span></div>
         <div class="feedback"><div class="fb-label">Client feedback</div><div class="fb-quote">"Clear requirements, amazing to work with!"</div></div>
       </div></div>
@@ -556,9 +480,9 @@ footer a{color:var(--accent);text-decoration:none;}
         <div class="wc-chevron">▾</div>
       </div>
       <div class="wc-body"><div class="wc-inner">
-        <div class="wc-desc">Make.com automation capturing Stripe payments and logging to Google Sheets with full affiliate attribution — matching each payment to its source link for automated commission calculation.</div>
+        <div class="wc-desc">Make.com automation capturing Stripe payments logged to Google Sheets with full affiliate attribution — automated commission calculation by mapping each payment to its source link.</div>
         <div class="wc-pills"><span class="wc-pill">Stripe API</span><span class="wc-pill">Make.com</span><span class="wc-pill">Google Sheets</span><span class="wc-pill">Affiliate tracking</span></div>
-        <div class="feedback"><div class="fb-label">Client feedback · Joshua, USA</div><div class="fb-quote">"Sam comes up with solutions, not excuses — which is hard to find these days. Went above and beyond even after project completion."</div></div>
+        <div class="feedback"><div class="fb-label">Client feedback · Joshua, USA</div><div class="fb-quote">"He comes up with solutions, not excuses — which is hard to find these days. Went above and beyond even after project completion."</div></div>
       </div></div>
     </div>
 
@@ -569,9 +493,9 @@ footer a{color:var(--accent);text-decoration:none;}
         <div class="wc-chevron">▾</div>
       </div>
       <div class="wc-body"><div class="wc-inner">
-        <div class="wc-desc">Full form-to-notification pipeline delivered and tested within 24 hours — Google Form, Make.com scenario, Google Sheets logging, and email alerts with full documentation.</div>
+        <div class="wc-desc">Full form-to-notification pipeline delivered and tested within 24 hours — Google Form, Make.com scenario, Google Sheets logging, and email alerts with documentation.</div>
         <div class="wc-pills"><span class="wc-pill">Google Forms</span><span class="wc-pill">Make.com</span><span class="wc-pill">Google Sheets</span><span class="wc-pill">Email</span></div>
-        <div class="feedback"><div class="fb-label">Client feedback</div><div class="fb-quote">"Outstanding results! Saved us 20–30 hours weekly. Fast delivery, perfect execution, and excellent communication throughout."</div></div>
+        <div class="feedback"><div class="fb-label">Client feedback</div><div class="fb-quote">"Outstanding results! Saved us 20–30 hours weekly. Fast delivery, perfect execution, and excellent communication."</div></div>
       </div></div>
     </div>
 
@@ -590,7 +514,7 @@ footer a{color:var(--accent);text-decoration:none;}
 
     <div class="wc" onclick="toggleWC(this)">
       <div class="wc-header">
-        <div class="wc-left"><div class="wc-dot"></div><div><div class="wc-title">Airtable + Make.com Follower Tracking Workflow</div><div class="wc-company">Anonymous · USA · Upwork</div></div></div>
+        <div class="wc-left"><div class="wc-dot"></div><div><div class="wc-title">Airtable + Make.com Follower Tracking</div><div class="wc-company">Anonymous · USA · Upwork</div></div></div>
         <div class="wc-tags"><span class="wc-tag">Make.com</span><span class="wc-tag">Airtable</span></div>
         <div class="wc-chevron">▾</div>
       </div>
@@ -608,9 +532,9 @@ footer a{color:var(--accent);text-decoration:none;}
         <div class="wc-chevron">▾</div>
       </div>
       <div class="wc-body"><div class="wc-inner">
-        <div class="wc-desc">Fast-turnaround complex Make.com build under a tight deadline. Scope private per client request. Delivered with full testing and documentation.</div>
+        <div class="wc-desc">Fast-turnaround complex Make.com build under tight deadline. Scope private per client request. Delivered with full testing and documentation.</div>
         <div class="wc-pills"><span class="wc-pill">Make.com</span><span class="wc-pill">Complex automation</span></div>
-        <div class="feedback"><div class="fb-label">Client feedback</div><div class="fb-quote">"Samandar is an incredible talent. Patience, determination and grit. I'm already looking forward to something long-term with him."</div></div>
+        <div class="feedback"><div class="fb-label">Client feedback</div><div class="fb-quote">"Samandar is an incredible talent. Patience, determination and grit. Already looking forward to something long-term."</div></div>
       </div></div>
     </div>
 
@@ -621,9 +545,9 @@ footer a{color:var(--accent);text-decoration:none;}
         <div class="wc-chevron">▾</div>
       </div>
       <div class="wc-body"><div class="wc-inner">
-        <div class="wc-desc">Debugged an n8n workflow that checks product orders in Excel and updates a second sheet. Identified the broken node, fixed it, and delivered clear handoff documentation.</div>
+        <div class="wc-desc">Debugged an n8n workflow checking product orders in Excel and updating a second sheet. Identified the broken node, fixed it, delivered clear handoff documentation.</div>
         <div class="wc-pills"><span class="wc-pill">n8n</span><span class="wc-pill">Excel</span><span class="wc-pill">Debugging</span></div>
-        <div class="feedback"><div class="fb-label">Client feedback</div><div class="fb-quote">"Delivered exactly what we needed in the agreed upon time. Very satisfied with his work — can recommend him."</div></div>
+        <div class="feedback"><div class="fb-label">Client feedback</div><div class="fb-quote">"Delivered exactly what we needed in the agreed upon time. Very satisfied — can recommend him."</div></div>
       </div></div>
     </div>
 
@@ -631,20 +555,17 @@ footer a{color:var(--accent);text-decoration:none;}
 </div>
 </div>
 
-<!-- ══ CONNECT ══ -->
 <div class="section" id="connect">
 <div class="wrap">
-  <div class="sec-header">
-    <div>
-      <div class="sec-eyebrow">// 06 — Connect</div>
-      <div class="sec-title">Let's work together</div>
-    </div>
-  </div>
-  <div class="connect-grid fi">
-    <a href="mailto:jumanovsamandar005@gmail.com" class="cc">
+  <div class="sec-header"><div>
+    <div class="sec-eyebrow">// 06 — Connect</div>
+    <div class="sec-title">Let's work together</div>
+  </div></div>
+  <div class="connect-grid">
+    <a href="mailto:samandar@example.com" class="cc">
       <div class="cc-icon">@</div>
       <div class="cc-name">Email</div>
-      <div class="cc-handle">jumanovsamandar005@gmail.com</div>
+      <div class="cc-handle">samandar@example.com</div>
       <div class="cc-arrow">↗</div>
     </a>
     <a href="https://www.upwork.com/freelancers/samandarjumanov" target="_blank" class="cc">
@@ -673,31 +594,11 @@ footer a{color:var(--accent);text-decoration:none;}
 
 <footer>
   <span>© 2026 Samandar Jumanov · Tashkent, Uzbekistan</span>
-  <span>Open to remote full-time · <a href="mailto:jumanovsamandar005@gmail.com">jumanovsamandar005@gmail.com</a></span>
+  <span>Open to remote full-time · <a href="mailto:samandar@example.com">samandar@example.com</a></span>
 </footer>
 
 <script>
-const C=document.getElementById('C'),CR=document.getElementById('CR');
-let mx=0,my=0,rx=0,ry=0;
-document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;C.style.left=mx+'px';C.style.top=my+'px';});
-(function loop(){rx+=(mx-rx)*.11;ry+=(my-ry)*.11;CR.style.left=rx+'px';CR.style.top=ry+'px';requestAnimationFrame(loop);})();
-document.querySelectorAll('a,button,.proj-card,.wc,.sp,.cc').forEach(el=>{
-  el.addEventListener('mouseenter',()=>{C.classList.add('h');CR.classList.add('h');});
-  el.addEventListener('mouseleave',()=>{C.classList.remove('h');CR.classList.remove('h');});
-});
-function playV(){
-  const f=document.getElementById('vemb'),p=document.getElementById('vph');
-  f.src=f.dataset.src+'?autoplay=1';f.classList.add('on');p.style.display='none';
-}
-function toggleWC(el){
-  const isOpen=el.classList.contains('open');
-  document.querySelectorAll('.wc.open').forEach(w=>w.classList.remove('open'));
-  if(!isOpen)el.classList.add('open');
-}
-const obs=new IntersectionObserver((entries)=>{
-  entries.forEach((e,i)=>{if(e.isIntersecting)setTimeout(()=>e.target.classList.add('v'),i*60);});
-},{threshold:.06});
-document.querySelectorAll('.fi').forEach(el=>obs.observe(el));
+function toggleWC(el){el.classList.toggle('open');}
 </script>
 </body>
 </html>
